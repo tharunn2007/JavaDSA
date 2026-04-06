@@ -1,0 +1,36 @@
+TYPES OF LANGUAGES:PROCEDURAL,FUNCTIONAL,OBJECT ORIENTED
+    (learn by urself again)
+
+STATIC LANGUAGE:
+    Compile time type checking and error checking
+    Declare data type before using it
+    More control
+
+DYNAMIC LANGUAGE:
+    Perform type checking and error checking at run-time
+    No need to declare datatype of variables
+    Saves time in writing code but error at run time and slow
+
+STACK MEMORY MANAGEMENT & HEAP MEMORY MANAGEMENT:
+    variables (reference variables in specific) are stored in stack
+    actual value of the object assigned to a variable assigned in heap
+
+    a=10 - here a is the reference variable and the object is something that is assigned to the variable and 10 is the value of the object
+    "a" is gonna point towards the object in the heap and 10 is not the actual value of "a" but rather a just represent 10 in the memory
+
+    more than one reference variables can point towards one object and if any one variable change value of one object then all the variable that points towards that object gets updated as well
+    eg: a=102
+        b=a
+        a=123
+        print(b)
+            then automatically b will also become 103
+
+    what happens if there is no reference variable pointing to an object?
+    then this object will be removed from the memory automatically by garbage collection in java
+    eg: just like a got converted from 102 to 123 the object 102 gets removed using garabage collection
+
+    
+
+
+
+
