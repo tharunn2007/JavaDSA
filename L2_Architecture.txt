@@ -1,0 +1,70 @@
+HOW JAVA CODE EXECUTES?
+    .java file(human readable source code) ---compiler (entire file)--->.class file( byte code,this code will not directly run on a system and need JVM to run this,reason why Java is platform independent )---interpreter(line by line)--->Machine binary code
+
+    unlike cpp,c which compiles the source code that directly convert to machine code in the form of .exe file which is platform dependent but java converts into a intermediate language of java that can be run only with JVM so if we download JVM in any OS be it linux,mac or windows we can take the java code and run it with no compatibility issues.
+
+MORE ABOUT PLATFORM INDEPENDENCE IN JAVA AND HOW IT IS DONE?
+    Means byte code can run on all OS
+    Normally compiler convert to machine code directly to get a .exe file which is platform dependent( they are compiled into native machine binary code and are structured according to OS specific binary formats that only the OS can read)
+    Java as a language itself is platform independent but JVM is platform dependent as it is tailored to specific OS that converts to byte to native machine code
+
+ARCHITECTURE OF JAVA IN WHOLE:
+    (JDK=JRE+Development tools     (JRE=JVM+Library classes        (JVM         (JIT-just in time compiler)         )          )         )
+
+    JDK:java development kit
+        provide enivronment to develop and run java program
+        development tools to provide environment to develop
+        JRE to execute your program
+        a compiler - javac   (.java to .class file)
+        archiver - jar
+        docs generator - javadoc
+        interpreter / loader
+
+    JRE:java development enivironment
+        installation package that provide environment to ONLY run the program
+        consists of:
+            deployment technologies
+            UI toolkits
+            Integration libraries
+            Base libraries
+            JVM
+        After getting class file the following things happen at runtime:
+            Class loader loads all classes needed to execute the program into the memory
+            JVM send code to byte code verifier to check the format of the code (in case of any errors or illegal practices like using applications fo pointers which doesnt exist in java)
+
+
+    MORE DETAILED VIEW:
+        COMPILE TIME: .java file ---javac compilation--->  .class file
+        RUN TIME: Class loader----bytecode verifier---interpreter---runtime---hardware
+
+
+         HOW JVM WORKS:CLASS LOADER
+                    Loading
+                        reads class files and generate binary data
+                        on object of this class is created in heap
+                    Linking
+                        JVM verify .class file
+                        allocates memory for class variables and default values
+                        replace symbolic references from the type with direct references(replaced with actual values )
+                            eg: if a=20,b=30 sum=a+b then a and b are replaced with their actul values
+                    Initialization
+                        all static variables (variables that dont depend on object of the classes ) are assigned with their values defined in the code and static block
+                        static variables are the variables that dont depend on the objects of the classes aka. object independent (Eg:what are the properties that humans inherit but its dependant on individual self...it could be population each person say indian population is 1.4 which is comman across all humans which in this case humans as in the objects of the class...therefore we can say the population variable is not different for eeach and every objecy and is sdame for every object underr that cspecific classes )
+                    NOTE: JVM contains the Stack and Heap memory allocations
+
+        JVM EXECUTION:
+            Interpreter:
+                Line by line execution,when one method is called many times it will interpret again and again
+        JIT:
+            solves the repetition of same code which improves efficiency
+            those methods that are repeated JIT provides direct machine code so re interpretation are not required making execution faster
+
+
+JAVA SOURCE CODE---JDK---BYTECODE---HVM---JRE
+
+JRE is like a box and JVM is like the actual content inside the box--whatever JVM needs JRE provides its as JRE has the libraries
+
+
+
+
+
