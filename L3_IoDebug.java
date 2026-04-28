@@ -68,6 +68,52 @@ public class Input {
 /////////////////////////////////////////////////////////////////////////////////
 //TYPE CASTING
 
+public class Typecasting{
+    public static void main(String[] args) {
+    
+    //INT TO FLOAT
+    int myInt = 10;
+    float myFloat = myInt; //automatic type conversion from int-->float
+    System.out.println("INT: "+myInt);
+    System.out.println("FLOAT: "+ myFloat);
+
+    //FLOAT TO INTEGER CONVERSION
+    float float2 = 10.9f;
+    int int2 = (int)float2;// gives 10
+    int int2rounded = Math.round(float2); //gives 11 or nearest integer
+    System.out.println(int2);
+    System.out.println(int2rounded);
+
+    //DOUBLE TO INTEGER
+    double doub3 = 123.213412;
+    int int1243 = (int)doub3;
+    System.out.println(int1243);
+
+
+//PARSE METHOD anything from string 
+
+    //STRING TO INT
+    String intstr="123";
+    int int3 = Integer.parseInt(intstr); // gives 123 as int3
+
+    //STRING TO DECIMAL
+    String intstr2="123.455";
+    double double2 = Double.parseDouble(intstr2);// gives 123.455 as double 
+
+    //String to boolean 
+    String str5 = "True";
+    boolean bool2 = Boolean.parseBoolean(str5);
+
+         }
+}
+
+
+
+
+
+
+
+
 
 
 
