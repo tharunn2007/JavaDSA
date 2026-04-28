@@ -43,7 +43,31 @@ public class IoDebug {
 }
 
 ////////////////////////////////////////////////////////////////////////////
-//DATATYPES primitive
+import java.util.Scanner;
+
+public class Input {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = input.nextLine();
+        System.out.println("What is your age?");
+        Integer age = input.nextInt();
+        System.out.println("What is your cgpa?");
+        Float gpa = input.nextFloat();
+        System.out.println("What is the decimal value of pi?");
+        Double pi = input.nextDouble();
+        System.out.println("Your name: "+ name );
+        System.out.println("Your age: "+ age);
+        System.out.println("Your cgpa :" + gpa);
+        System.out.println("Your pi value: " + pi);
+        
+
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////
+//TYPE CASTING
+
 
 
 
