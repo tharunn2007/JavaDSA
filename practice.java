@@ -78,6 +78,32 @@ public class practice {
     
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import java.util.Scanner;
+public class practice {
+    public static int HCF(int a ,int b){
+        if(b== 0){
+            return a;
+        }
+        else{
+            return HCF(b,a%b); //Euclidean algo  --  first a is getting divided and then b is devisor (gives a%b)....next b is getting devided and a%b becomes divisor
+        }
+            
+    }
+    public static int LCM(int a,int b){
+        return Math.abs(a*b)/HCF(a, b); //Absolute function used
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a :");
+        Integer a  = input.nextInt();
+        System.out.println("Enter b :");
+        Integer b  = input.nextInt();
+        System.out.println("HCF : "+ HCF(a,b) + " LCM : "+ LCM(a, b));
+
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
